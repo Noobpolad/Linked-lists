@@ -1,7 +1,6 @@
 import csv
 import time
 
-
 class Airport:
 
 	def __init__(self, code):
@@ -72,30 +71,19 @@ class LinkedList:
 				value = value.setNext(None)
 				break
 				
-			value = value.getNext()	
-					
-				
+			value = value.getNext()					
 
 list = LinkedList()
 
-
-"""with open('airport-codes.csv',encoding='utf-8') as csvfile:
+with open('airport-codes.csv',encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-       list.add(row['ident'])"""
+       list.add(row['ident'])
 
-list.add("MNP")
-list.add("KLL")
-list.add("OMN")
-list.add("AAP")       
-list.add("BBC")
-
-#start = time.time()       
+start = time.time()       
 list.bubbleSort()
-#end = time.time()
-list.remove("OMN")
+end = time.time()
+
 list.display()
-print(list._tail.getCode())
-#print('{:.2f}'.format(end - start))
 
-
+print('{:.2f}'.format(end - start))
